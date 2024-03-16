@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'cdn.imagin.studio',
+        protocol: 'https',
+        port: '',
+      },
+    ],
+  },
+};
 
 export default nextConfig;
