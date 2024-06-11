@@ -7,12 +7,12 @@ const CustomButton = ({
   textStyles,
   rightIcon,
   handleClick,
-  btnType,
+  btnType = 'button', // Default type is 'button'
 }: CustomButtonProps) => {
   return (
     <button
       disabled={false}
-      type={'button' || btnType}
+      type={btnType}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >
@@ -21,7 +21,7 @@ const CustomButton = ({
         <div className='relative w-6 h-6 '>
           <Image
             src={rightIcon}
-            alt={`${rightIcon}`}
+            alt={rightIcon}
             fill
             className='object-contain'
           />
